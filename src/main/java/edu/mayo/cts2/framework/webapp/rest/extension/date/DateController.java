@@ -30,18 +30,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import edu.mayo.cts2.framework.webapp.rest.extensions.controller.ControllerProvider;
+
 /**
  * The Class DateController.
  * 
  * @author <a href="mailto:kevin.peterson@mayo.edu">Kevin Peterson</a>
  */
-@Controller
-public class DateController {
+@Controller("dateControllerProvider")
+public class DateController implements ControllerProvider {
 
 	@RequestMapping(value = { "/date" }, method = RequestMethod.GET)
 	@ResponseBody
 	public Date getCurrentTime() {
 		return new Date();
+	}
+
+	@Override
+	public Object getController() {
+		return this;
 	}
 	
 }
