@@ -21,7 +21,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.mayo.cts2.framework.webapp.rest.extensions.date;
+package edu.mayo.cts2.framework.webapp.rest.extension.date;
 
 import java.util.Date;
 
